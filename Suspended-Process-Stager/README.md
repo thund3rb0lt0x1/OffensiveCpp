@@ -1,4 +1,4 @@
-A simple Windows shellcode loader that downloads shellcode from a specified HTTP URL and injects it into a suspended process (Notepad.exe) using thread context hijacking.
+A simple Windows shellcode loader that downloads shellcode from a specified HTTP URL and injects it into a suspended process (`Notepad.exe`) using thread context hijacking.
 
 ## 🚀 Description
 
