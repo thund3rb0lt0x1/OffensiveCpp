@@ -4,9 +4,10 @@ A simple Windows shellcode loader that downloads shellcode from a specified HTTP
 
 This tool demonstrates:
 - Downloading remote shellcode via HTTP
-- Allocating RWX memory with `VirtualAlloc`
-- Executing shellcode directly from memory (fileless execution)
-- Using the `wininet` API for stealthy C2 traffic
+- Allocating RWX memory with `VirtualAllocEx` in a suspended process
+- Injecting shellcode into the suspended process's memory
+- Hijacking the main thread’s context to execute shellcode (fileless execution)
+- Using the `WinINet` API for stealthy network communication
 
 > 🔐 Educational use only. Unauthorized use of this code is illegal.
 
