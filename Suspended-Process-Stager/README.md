@@ -20,8 +20,8 @@ This tool demonstrates:
 **In-memory shellcode execution over HTTP**
 
 - **Download stage**: Retrieves shellcode from a remote URL
-- **Memory stage**: Allocates executable memory (`PAGE_EXECUTE_READWRITE`)
-- **Execution**: Transfers control to shellcode via a function pointer
+- **Memory stage**: Allocates executable memory (`PAGE_EXECUTE_READWRITE`) in a suspended process
+- **Execution**: Hijacks thread context to transfer control to shellcode in the remote process
 
 ## 🧱 Requirements
 
